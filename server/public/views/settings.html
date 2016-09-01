@@ -21,6 +21,7 @@
                 <input ng-model="heroInfo.city" type="text" id="heroCity" name="heroCity" />
                 <br />
 
+                <label>Select a Power:</label>
                 <select name="repeatSelect" id="repeatSelect" ng-model="heroInfo.power_name">
                   <option ng-repeat="option in powerSelection.availableOptions" value="{{option.id}}">{{option.name}}</option>
                 </select>

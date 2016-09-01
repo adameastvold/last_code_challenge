@@ -1,0 +1,15 @@
+<div class="text-center">
+
+<h2>{{message}}</h2>
+
+
+<div>Heros you have selected:</div>
+  <div ng-repeat="hero in heros">
+    <div>Alias: {{hero.alias}}  |  First Name: {{hero.firstName}}  |  Last Name: {{hero.lastName}}  |  City: {{hero.city}}  |  Power: {{hero.power_name}} <button class="btn btn-danger" ng-click="deleteHero(hero._id)">delete</button></div>
+  </div>
+</div>
+<!-- going to need a ng-repeat that will call the function that get's all the
+hero info and displays them. check the petfiner app for an example
+ -->
+
+</div>

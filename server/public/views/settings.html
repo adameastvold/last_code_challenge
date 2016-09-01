@@ -1,0 +1,39 @@
+<div class="text-center">
+
+
+<h2>{{message}}</h2>
+<p>settings!</p>
+
+<form id="heroInfo">
+            <div class="mainForm">
+                <label for="heroAlias">Alias:</label>
+                <input ng-model="heroInfo.alias" type="text" id="heroAlias" name="heroAlias" />
+                <br />
+                <label for="heroFirstName">First Name:</label>
+                <input ng-model="heroInfo.firstName" type="text" id="heroFirstName" name="heroFirstName" />
+                <br />
+
+                <label for="heroLastName">Last Name:</label>
+                <input ng-model="heroInfo.lastName" type="text" id="heroLastName" name="heroLastName" />
+                <br />
+
+                <label for="heroCity">City:</label>
+                <input ng-model="heroInfo.city" type="text" id="heroCity" name="heroCity" />
+                <br />
+
+                <select name="repeatSelect" id="repeatSelect" ng-model="heroInfo.power_name">
+                  <option ng-repeat="option in powerSelection.availableOptions" value="{{option.id}}">{{option.name}}</option>
+                </select>
+
+            </div>
+
+            <input ng-click="submitHero()" type="submit" value="Submit Hero" id='submitButton' />
+        </form>
+
+      </div>
+<!-- going to need a form with inputs, have to grab all the input information
+using ng-model, then send it in a post request.
+
+eventually this page will also contain a delete request
+
+double check if they asked for an update request -->
